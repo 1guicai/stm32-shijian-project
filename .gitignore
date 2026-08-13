@@ -1,0 +1,28 @@
+# ==================================================
+# 根级黑名单模式：默认全部忽略，只白名单两个新项目和根 README
+# ==================================================
+
+*
+!*/
+
+!.gitignore
+!README.md
+
+!env_monitor/**
+!smart_car/**
+
+env_monitor/Objects/
+env_monitor/Listings/
+smart_car/Objects/
+smart_car/Listings/
+
+*.uvguix.*
+*.uvoptx
+*.dep
+
+*.bak
+*.tmp
+*.log
+*.swp
+.DS_Store
+Thumbs.db
