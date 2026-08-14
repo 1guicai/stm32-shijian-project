@@ -1,6 +1,6 @@
 # stm32-shijian-project · STM32 综合实战作品集
 
-> **求职项目作品集**：基于 STM32F103C8T6 标准外设库，两个原创综合应用。每个项目把多个独立知识点串成**可用系统**，突出：驱动分层（Hardware/System/User）、控制算法、数据可靠性、非阻塞调度、人机交互 + 串口协议栈。
+> **项目作品集**：基于 STM32F103C8T6 标准外设库，两个原创综合应用。每个项目把多个独立知识点串成**可用系统**，特点：驱动分层（Hardware/System/User）、控制算法、数据可靠性、非阻塞调度、人机交互 + 串口协议栈。
 >
 > 平台：Arm Cortex-M3 / STM32F103C8T6 (72MHz, 20KB SRAM, 64KB Flash) · Keil MDK5 · STM32F10x StdPeriph_Driver
 
