@@ -1,28 +1,45 @@
 # ==================================================
 # 根级黑名单模式：默认全部忽略，只白名单两个新项目和根 README
+# 这样不会把原教程目录 1-x ~ 15-x 带上
 # ==================================================
 
+# 1. 先全部忽略
 *
-!*/
 
-!.gitignore
+# 2. 白名单化：先放行目录本身（否则 git 不访问子目录），再放行其所有内容
 !README.md
+!.gitignore
+!/env_monitor/
+!/env_monitor/**
+!/smart_car/
+!/smart_car/**
 
-!env_monitor/**
-!smart_car/**
-
-env_monitor/Objects/
-env_monitor/Listings/
-smart_car/Objects/
-smart_car/Listings/
-
-*.uvguix.*
-*.uvoptx
-*.dep
-
+# 3. 即便是白名单项目内部，也过滤编译产物/Keil用户文件
+**/Objects/
+**/Listings/
+**/*.obj
+**/*.o
+**/*.d
+**/*.crf
+**/*.axf
+**/*.elf
+**/*.hex
+**/*.bin
+**/*.htm
+**/*.map
+**/*.lnp
+**/*.uvguix.*
+**/*.dep
+keilkill.bat
+**/keilkill.bat
 *.bak
-*.tmp
-*.log
-*.swp
+
+# 系统/编辑器
 .DS_Store
 Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.log
